@@ -65,7 +65,7 @@ module.exports = async function () {
 
   const copyEslintConfig = [
     spawnSync('cp', ['-R', join(filePathOrigin, '.eslintrc.json'), filePathDestiny], spawnOptions),
-    'Step 3 - Copying gitignore file',
+    'Step 3 - Copying eslint config file',
   ]
   log(copyEslintConfig)
 
