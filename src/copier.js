@@ -52,7 +52,7 @@ module.exports = async function () {
   }
 
   const delEverythingFromDestiny = [
-    spawnSync('rm', ['-rf', join(filePathDestiny, 'node_modules')], spawnOptions),
+    spawnSync('rm', ['-rf', join(filePathDestiny, '/*')], spawnOptions),
     'Step 1 - Deleting everything in destiny project except the dotfiles',
   ]
   log(delEverythingFromDestiny)
