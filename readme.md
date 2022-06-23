@@ -4,13 +4,13 @@
 
 Little script to
 
-1. Delete the `node_modules` folder
-2. Delete the `.gitignore` file
-3. Delete the `.eslintrc.json` file
-4. Copy the contents of one project into another
+1. Delete everything except dotfiles in destiny project
+2. Delete `node_modules` folder in origin project
+3. Copy dotfiles from origin to destiny project
+4. Copy the rest from origin to destiny
 
 ## Using @ladrillo/copy-project
 
 ```bash
-npx @ladrillo/copy-project@latest ./origin ./destination
+npx @ladrillo/copy-project@latest ./origin ./destiny
 ```

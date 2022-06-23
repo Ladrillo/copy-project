@@ -51,27 +51,33 @@ module.exports = async function () {
     process.exit(1)
   }
 
+  const delEverythingFromDestiny = [
+    spawnSync('rm', ['-rf', join(filePathDestiny, 'node_modules')], spawnOptions),
+    'Step 1 - Deleting everything in destiny project except the dotfiles',
+  ]
+  log(delEverythingFromDestiny)
+
   const delNodeModulesFromOrigin = [
     spawnSync('rm', ['-rf', join(filePathOrigin, 'node_modules')], spawnOptions),
-    'Step 1 - Deleting node_modules from origin project',
+    'Step 2 - Deleting node_modules from origin project',
   ]
   log(delNodeModulesFromOrigin)
 
   const copyGitIgnore = [
     spawnSync('cp', ['-R', join(filePathOrigin, '.gitignore'), filePathDestiny], spawnOptions),
-    'Step 2 - Copying gitignore file',
+    'Step 3 - Copying gitignore file',
   ]
   log(copyGitIgnore)
 
   const copyEslintConfig = [
     spawnSync('cp', ['-R', join(filePathOrigin, '.eslintrc.json'), filePathDestiny], spawnOptions),
-    'Step 3 - Copying eslint config file',
+    'Step 4 - Copying eslint config file',
   ]
   log(copyEslintConfig)
 
   const copyRest = [
     spawnSync('cp', ['-R', join(filePathOrigin, '/*'), filePathDestiny], spawnOptions),
-    'Step 4 - Copying rest of files',
+    'Step 5 - Copying rest of files',
   ]
   log(copyRest)
 
