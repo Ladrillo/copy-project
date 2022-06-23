@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { spawnSync } = require('child_process')
-const { join, resolve } = require('path')
+const { join } = require('path')
 const fs = require('fs')
 
 process.setUncaughtExceptionCaptureCallback(error => {

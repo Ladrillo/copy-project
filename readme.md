@@ -1,18 +1,16 @@
-# @ladrillo/upgrade-deps
+# @ladrillo/copy-project
 
 ## About
 
 Little script to
 
 1. Delete the `node_modules` folder
-2. Delete the `package-lock.json` file
-3. Upgrade the dependencies of the project using `ncu`
-4. Generate a new lockfile
-5. Commit and and push to the `main` branch
-6. Execute the tests of the project
+2. Delete the `.gitignore` file
+3. Delete the `.eslintrc.json` file
+4. Copy the contents of one project into another
 
-## Using @ladrillo/upgrade-deps
+## Using @ladrillo/copy-project
 
 ```bash
-npx @ladrillo/upgrade-deps@latest
+npx @ladrillo/copy-project@latest ./origin ./destination
 ```
